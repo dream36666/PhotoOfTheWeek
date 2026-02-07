@@ -12,6 +12,8 @@ export default function Navbar() {
         <Link to="/upload" style={{ color: '#ddd', textDecoration: 'none' }}>Upload (This Week)</Link>
         <Link to="/vote" style={{ color: '#ddd', textDecoration: 'none' }}>Vote (Last Week)</Link>
         <Link to="/search" style={{ color: '#ddd', textDecoration: 'none' }}>Search</Link>
+        <Link to="/leaderboard" style={{ color: '#ddd', textDecoration: 'none' }}>Leaderboard</Link>
+        <Link to="/info" style={{ color: '#ddd', textDecoration: 'none' }}>Help</Link>
       </div>
       <div>
         {currentUser ? (
