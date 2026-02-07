@@ -5,6 +5,15 @@ import { useAuth } from '../contexts/AuthContext';
 export default function Navbar() {
   const { currentUser, login, logout } = useAuth();
 
+  const handleLogin = async () => {
+    try {
+      await login();
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Login failed: " + error.message);
+    }
+  };
+
   return (
     <nav style={{ padding: '1rem', background: '#333', color: 'white', display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ display: 'flex', gap: '20px' }}>
@@ -17,12 +26,15 @@ export default function Navbar() {
       </div>
       <div>
         {currentUser ? (
-          <div style={{ display: 'flex', gap: '15px' }}>
+          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+             <span style={{ color: 'white', fontSize: '0.9em' }}>
+               {currentUser.displayName || currentUser.email}
+             </span>
              <Link to={`/profile/${currentUser.uid}`} style={{ color: 'white' }}>My Profile</Link>
              <button onClick={logout}>Logout</button>
           </div>
         ) : (
-          <button onClick={login}>Login with Google</button>
+          <button onClick={handleLogin}>Login with Google</button>
         )}
       </div>
     </nav>
