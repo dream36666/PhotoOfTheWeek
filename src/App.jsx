@@ -12,7 +12,7 @@ import Info from './pages/Info';
 export default function App() {
   return (
     /* CHANGE 1: Added basename so it works on GitHub Pages sub-folders */
-    <Router basename="/PhotoOfTheWeek">
+    <Router>
       <AuthProvider>
         <Navbar />
         <div style={{ padding: '20px' }}> {/* Added a container for spacing */}
