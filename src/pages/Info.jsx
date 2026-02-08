@@ -12,6 +12,10 @@ export default function Info() {
           Every week from Monday morning to Sunday night, you can upload <strong>one photo</strong>. 
           If you change your mind, just upload a new one—it will automatically replace your previous entry for that week.
         </p>
+        <p>
+          IMPORTANT NOTE, all uploaded pictures must have been taken the SAME week as uploading them.
+          Thats the challenge of this, to take a new photo every week.
+        </p>
       </section>
 
       <section style={{ marginBottom: '30px' }}>
